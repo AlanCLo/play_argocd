@@ -4,12 +4,17 @@ metadata:
   name: before-test-what
   annotations:
     hello: annotations
-    # argocd.argoproj.io/hook: PreSync
-    # argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
   labels:
     world: labels
 spec:
   template:
+    metadata:
+      annotations:
+        hello: pods.anno
+      labels:
+        world: pods.labels
     spec:
       containers:
       - name: test-job

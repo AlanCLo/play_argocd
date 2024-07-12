@@ -11,6 +11,6 @@ spec:
       containers:
       - name: test-job
         image: alpine:latest
-        command: ["sleep", "1000"]
+        command: ["sleep", "1"]
       restartPolicy: Never
   backoffLimit: 0

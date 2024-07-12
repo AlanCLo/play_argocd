@@ -1,10 +1,13 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: before-test2
+  name: before-test-what
   annotations:
-    argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+    hello: annotations
+    # argocd.argoproj.io/hook: PreSync
+    # argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+  labels:
+    world: labels
 spec:
   template:
     spec:

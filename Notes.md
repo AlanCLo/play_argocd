@@ -71,4 +71,3 @@ argocd app create hooks-test \
     --dest-server https://kubernetes.default.svc \
     --dest-namespace default
 ```
-

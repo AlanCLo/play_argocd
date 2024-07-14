@@ -65,9 +65,9 @@ Note: Apps don't seem to sync automatically and start as OutOfSync, with no reso
 To deploy my test app which was drawn from the examples:
 
 ```bash
-argocd app create hooks-test \
+argocd app create test_app \
     --repo https://github.com/AlanCLo/play_argocd.git  \
-    --path hooks-test \
+    --path test_app \
     --dest-server https://kubernetes.default.svc \
     --dest-namespace default
 ```

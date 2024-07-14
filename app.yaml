@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc 
   project: default 
   source: 
-    path: hooks-test
+    path: test_app
     repoURL: https://github.com/AlanCLo/play_argocd
     targetRevision: HEAD
   syncPolicy: 

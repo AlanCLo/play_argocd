@@ -6,4 +6,4 @@ metadata:
     argocd.argoproj.io/sync-wave: "-2"
 data:
   README.md: |-
-{{ .Files.Get "README.md" | indent 4 }}
+{{ .Files.Get "some_data.txt" | indent 4 }}

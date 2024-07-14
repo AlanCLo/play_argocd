@@ -4,9 +4,9 @@ kind: ReplicaSet
 metadata:
   name: frontend
   annotations:
-    argocd.argoproj.io/sync-wave: "-1"
+    # argocd.argoproj.io/sync-wave: "-1"
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       tier: frontend

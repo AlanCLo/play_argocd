@@ -30,6 +30,6 @@ spec:
         volumeMounts:
         - name: mydata
           mountPath: /mydata
-        command: ["sleep", "3"]
+        command: ["sleep", "5"]
       restartPolicy: Never
   backoffLimit: 0

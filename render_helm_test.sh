@@ -6,4 +6,4 @@ fi
 
 mkdir -p ./helm_output
 
-helm template test_app --output-dir ./helm_output
+helm template test-app --output-dir ./helm_output

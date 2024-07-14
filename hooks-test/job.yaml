@@ -4,7 +4,8 @@ metadata:
   name: before-test
   annotations:
     hello: annotations
-    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
   labels:
     world: labels
@@ -16,9 +17,19 @@ spec:
       labels:
         world: pods.labels
     spec:
+      volumes:
+      - name: mydata
+        configMap:
+          name: myconf
+          items:
+          - key: README.md
+            path: README.md
       containers:
       - name: test-job
         image: alpine:latest
+        volumeMounts:
+        - name: mydata
+          mountPath: /mydata
         command: ["sleep", "1"]
       restartPolicy: Never
   backoffLimit: 0

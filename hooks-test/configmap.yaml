@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconf
+  annotations:
+    argocd.argoproj.io/sync-wave: "-2"
+data:
+  README.md: |-
+{{ .Files.Get "README.md" | indent 4 }}

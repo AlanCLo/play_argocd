@@ -32,7 +32,7 @@ spec:
           mountPath: /mydata
         # command: ["sleep", "5"]
         command:
-          - /bin/bash
+          - /bin/sh
           - -c
           - |
             echo "test job"

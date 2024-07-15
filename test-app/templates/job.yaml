@@ -36,7 +36,8 @@ spec:
           - -c
           - |
             echo "test job"
-            echo "perform an error"
-            ls asdfsadf
+            sleep 3
+            # echo "perform an error"
+            # ls asdfsadf
       restartPolicy: Never
   backoffLimit: 0

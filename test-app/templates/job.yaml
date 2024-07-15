@@ -30,13 +30,13 @@ spec:
         volumeMounts:
         - name: mydata
           mountPath: /mydata
-        # command: ["sleep", "5"]
-          command:
-          - /bin/bash
-          - -c
-          - |
-            echo "test job"
-            echo "perform an error"
-            ls asdfsadf
+        command: ["sleep", "5"]
+          # command:
+          # - /bin/bash
+          # - -c
+          # - |
+          #   echo "test job"
+          #   echo "perform an error"
+          #   ls asdfsadf
       restartPolicy: Never
   backoffLimit: 0

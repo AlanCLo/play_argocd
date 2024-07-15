@@ -30,7 +30,6 @@ spec:
         volumeMounts:
         - name: mydata
           mountPath: /mydata
-        # command: ["sleep", "5"]
         command:
           - /bin/sh
           - -c

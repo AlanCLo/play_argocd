@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: frontend
-  annotations:
+  # annotations:
     # argocd.argoproj.io/sync-wave: "-1"
 spec:
   replicas: 3

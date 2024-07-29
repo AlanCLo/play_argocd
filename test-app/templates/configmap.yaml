@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: myconf
   annotations:
-    argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/sync-wave: "1"
 data:
   README.md: |-
 {{ .Files.Get "some_data.txt" | indent 4 }}

@@ -41,7 +41,7 @@ spec:
             # ls asdfsadf
       restartPolicy: Never
   backoffLimit: 0
-  activeDeadlineSeconds: 3
+  activeDeadlineSeconds: 30
 ---
 apiVersion: batch/v1
 kind: Job

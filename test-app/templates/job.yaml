@@ -17,7 +17,7 @@ spec:
       labels:
         world: pods.labels
     spec:
-      serviceAccountName: jobsa
+      serviceAccountName: jobsa2
       volumes:
       - name: mydata
         configMap:

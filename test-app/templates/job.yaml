@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: before-test
+  name: after-test
   annotations:
     hello: annotations
     argocd.argoproj.io/sync-wave: "1"
@@ -17,6 +17,7 @@ spec:
       labels:
         world: pods.labels
     spec:
+      serviceAccountName: jobsa
       volumes:
       - name: mydata
         configMap:
@@ -35,8 +36,8 @@ spec:
           - -c
           - |
             echo "test job"
-            # sleep 3000
-            echo "perform an error"
-            ls asdfsadf
+            sleep 1
+            # echo "perform an error"
+            # ls asdfsadf
       restartPolicy: Never
   backoffLimit: 0

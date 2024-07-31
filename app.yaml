@@ -16,9 +16,9 @@ spec:
     automated: {}
       # prune: true
       # selfHeal: true
-    retry:
-      limit: 1
-      backoff:
-        duration: 1s
-        factor: 2
-        maxDuration: 1m
+    # retry:
+    #   limit: 1
+    #   backoff:
+    #     duration: 1s
+    #     factor: 2
+    #     maxDuration: 1m

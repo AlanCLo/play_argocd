@@ -15,6 +15,7 @@ spec:
       labels:
         tier: frontend
     spec:
+      serviceAccountName: jobsa
       containers:
         - name: main
           image: nginx:latest

@@ -1,43 +1,43 @@
-# apiVersion: batch/v1
-# kind: Job
-# metadata:
-#   name: after-test
-#   annotations:
-#     hello: annotations
-#     argocd.argoproj.io/sync-wave: "1"
-#     argocd.argoproj.io/hook: Sync
-#     argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
-#   labels:
-#     world: labels
-# spec:
-#   template:
-#     metadata:
-#       annotations:
-#         hello: pods.anno
-#       labels:
-#         world: pods.labels
-#     spec:
-#       serviceAccountName: jobsa
-#       volumes:
-#       - name: mydata
-#         configMap:
-#           name: myconf
-#           items:
-#           - key: README.md
-#             path: README.md
-#       containers:
-#       - name: test-job
-#         image: alpine:latest
-#         volumeMounts:
-#         - name: mydata
-#           mountPath: /mydata
-#         command:
-#           - /bin/sh
-#           - -c
-#           - |
-#             echo "test job"
-#             sleep 1
-#             # echo "perform an error"
-#             # ls asdfsadf
-#       restartPolicy: Never
-#   backoffLimit: 0
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: after-test
+  annotations:
+    hello: annotations
+    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+  labels:
+    world: labels
+spec:
+  template:
+    metadata:
+      annotations:
+        hello: pods.anno
+      labels:
+        world: pods.labels
+    spec:
+      serviceAccountName: jobsa2
+      volumes:
+      - name: mydata
+        configMap:
+          name: myconf
+          items:
+          - key: README.md
+            path: README.md
+      containers:
+      - name: test-job
+        image: alpine:latest
+        volumeMounts:
+        - name: mydata
+          mountPath: /mydata
+        command:
+          - /bin/sh
+          - -c
+          - |
+            echo "test job"
+            sleep 1
+            # echo "perform an error"
+            # ls asdfsadf
+      restartPolicy: Never
+  backoffLimit: 0

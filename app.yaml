@@ -13,6 +13,6 @@ spec:
     repoURL: https://github.com/AlanCLo/play_argocd
     targetRevision: HEAD
   syncPolicy: 
-    automated:
-      prune: true
-      selfHeal: true
+    automated: {}
+      # prune: true
+      # selfHeal: true
